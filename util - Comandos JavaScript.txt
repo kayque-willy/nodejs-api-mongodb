@@ -1,0 +1,35 @@
+---------------------------------------------------------------------------------------------------------
+
+> $  npm install express //--------------// Instalação do Express
+
+> $  npm install -d nodemon //--------------// Instalação do Nodemon como modulo de desenvolvimento
+
+> $  npm install cors //--------------// Instalação do Cors
+
+> $  npm install morgan //--------------// Instalação do Morgan 
+
+> $  npm install jsonwebtoken //--------------// Instalação do Json Web Token 
+
+> $  npm install mongoose //--------------// Instalação do gerenciador do banco de dados MongoDB
+
+---------------------------------------------------------------------------------------------------------
+
+> $  npm init -y //--------------// Criação de um novo projeto node.js
+
+> $  npm run dev //--------------// Executa o projeto em desenvolvimento, executa o script "> $ nodemon src/index.js" no packge.json
+
+> $  npm run start //--------------// Executa o projeto em produção, executa o script "> $ node src/index.js" no packge.json
+
+---------------------------------------- IMPORTANTE ----------------------------------------
+
+Criar o arquivo jsconfi.json na raíz do diretório:
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "target": "es6",
+        "module": "commonjs"
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}

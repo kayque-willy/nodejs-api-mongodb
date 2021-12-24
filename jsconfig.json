@@ -1,0 +1,11 @@
+// O jsconfig.json é necessário para que o vstudio code identifique os arquivos do projeto
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "target": "es6",
+        "module": "commonjs"
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
