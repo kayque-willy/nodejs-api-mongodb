@@ -14,7 +14,7 @@ GET (json) -> return (json)
 
 # Create user
 POST (json) -> return (json)
-`http://localhost:8080/api/user/`
+`http://localhost:8080/api/user`
 
 # Get user by id
 GET (id = 1) -> return (json)
