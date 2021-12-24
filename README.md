@@ -17,14 +17,14 @@ POST (json) -> return (json)
 `http://localhost:8080/api/user`
 
 # Get user by id
-GET (id = 1) -> return (json)
+GET (id) -> return (json)
 `http://localhost:8080/api/user/:id`
 
 # Save user 
-PUT (json) -> return (json)
+PUT (json,id) -> return (json)
 `http://localhost:8080/api/user/:id`
 
 # Delete user by id
-DELETE (json) -> return boolean
+DELETE (json,id) -> return boolean
 `http://localhost:8080/api/user/:id`
 
