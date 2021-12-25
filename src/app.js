@@ -13,6 +13,7 @@ class App {
     }
 
     middleWares() {
+        // BodyParser json
         this.app.use(express.json());
         this.app.use(morgan('dev'));
         // Middleware 

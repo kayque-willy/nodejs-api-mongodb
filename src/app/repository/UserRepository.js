@@ -43,9 +43,9 @@ class UserRepository {
             user.type = req.body.type;
             user.password = req.body.password;
             // Salva o usuário no banco
-            user.save((err) => {
-                if (err)
-                    return res.status(400).json("Erro ao salvar o usuário no MongDB" + err);
+            user.save((error) => {
+                if (error)
+                    return res.status(400).json("Erro ao salvar o usuário no MongDB" + error);
                 return res.status(200).json(user);
             });
         });
@@ -59,9 +59,9 @@ class UserRepository {
             if (err)
                 return res.status(400).json("Erro ao buscar o usuário no MongDB" + err);
             // Remove o usuário do banco
-            user.remove((err) => {
-                if (err)
-                    return res.status(400).json("Erro ao remover o usuário no MongDB" + err);
+            user.remove((error) => {
+                if (error)
+                    return res.status(400).json("Erro ao remover o usuário no MongDB" + error);
                 return res.status(200).json("Usuário excluido com sucesso!");
             });
         });

@@ -9,17 +9,12 @@ class LoginController {
         const { name, password } = req.body;
         const user = await UserModel.findOne({ name });
         if (!user) {
-            return res.status(400).json({
-                message: "Usuário não existe!"
-            });
+            return res.status(400).send("Usuário não existe!");
         }
 
         // Verifica a senha
         if (password !== user.password) {
-            return res.status(400).json({
-                error: true,
-                message: "A senha está inválida!"
-            });
+            return res.status(400).send("A senha está inválida!");
         }
 
         // Gera o token
