@@ -33,8 +33,9 @@ class UserController {
     update(req, res) {
         //Recupera id enviado por parametro
         const user_id = req.params.id;
+        const user_update = req.body;
         // Salva o usuário no banco
-        return UserService.update(user_id, req, res);
+        return UserService.update(user_id, user_update, res);
     }
 
     // ------------------ Remover um usuário ------------------

@@ -33,23 +33,12 @@ class UserRepository {
     }
 
     // ------------------ Atualiza o usuário ------------------
-    update(id, req, res) {
-        // Procura o usuário por id no banco
-        UserSchema.findById(id, (err, user) => {
+    update(id, update, res) {
+        UserSchema.findByIdAndUpdate(id, update, {new: true}, (err, user) => {
             if (err)
                 return res.status(400).json("Erro ao buscar o usuário no MongDB" + err);
-            //Recupera o objeto da requisição
-            user.name = req.body.name;
-            user.type = req.body.type;
-            user.password = req.body.password;
-            // Salva o usuário no banco
-            user.save((error) => {
-                if (error)
-                    return res.status(400).json("Erro ao salvar o usuário no MongDB" + error);
-                return res.status(200).json(user);
-            });
+            return res.status(200).json(user);
         });
-
     }
 
     // ------------------ Remover um usuário ------------------

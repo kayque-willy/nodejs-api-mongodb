@@ -21,9 +21,9 @@ class UserService{
     }
 
     // ------------------ Atualiza o usuário ------------------
-    update(id, req, res) {
+    update(id, update, res) {
         // Salva o usuário no banco
-        return UserRepository.update(id, req, res);
+        return UserRepository.update(id, update, res);
     }
 
     // ------------------ Remover um usuário ------------------
