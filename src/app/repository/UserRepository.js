@@ -34,7 +34,7 @@ class UserRepository {
 
     // ------------------ Atualiza o usuário ------------------
     update(id, update, res) {
-        UserSchema.findByIdAndUpdate(id, update, {new: true}, (err, user) => {
+        UserSchema.findByIdAndUpdate(id, update, { new: true }, (err, user) => {
             if (err)
                 return res.status(400).json("Erro ao buscar o usuário no MongDB" + err);
             return res.status(200).json(user);
@@ -44,15 +44,10 @@ class UserRepository {
     // ------------------ Remover um usuário ------------------
     delete(id, res) {
         // Procura o usuário por id no banco
-        UserSchema.findById(id, (err, user) => {
+        UserSchema.findOneAndRemove(id, (err) => {
             if (err)
-                return res.status(400).json("Erro ao buscar o usuário no MongDB" + err);
-            // Remove o usuário do banco
-            user.remove((error) => {
-                if (error)
-                    return res.status(400).json("Erro ao remover o usuário no MongDB" + error);
-                return res.status(200).json("Usuário excluido com sucesso!");
-            });
+                return res.status(400).json("Erro ao remover os usuários no MongDB" + err);
+            return res.status(200).json("Usuário excluido com sucesso!");
         });
     }
 }
