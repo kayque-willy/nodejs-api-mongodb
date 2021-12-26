@@ -2,7 +2,7 @@
 
 > $  npm install express //--------------// Instalação do Express
 
-> $  npm install -d nodemon //--------------// Instalação do Nodemon como modulo de desenvolvimento
+> $  npm install nodemon -D //--------------// Instalação do Nodemon como modulo de desenvolvimento
 
 > $  npm install cors //--------------// Instalação do Cors
 
