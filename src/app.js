@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const morgan = require('morgan');
 const routes = require("./routes");
+//Conexão com o MongoDB
 require('./app/config/Connection');
 
 class App {
@@ -27,6 +28,7 @@ class App {
     }
 
     routes() {
+        // Adição das rotas e definição da URL da API
         this.app.use("/api", routes);
     }
 
