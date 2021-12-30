@@ -4,7 +4,9 @@ class UserController {
 
     // ------------------ Index ------------------
     index(req, res) {
-        res.status(200).send('<h2>Exemplo de API Restful</h2> <span>Node.js, Express e MongoDB</span>');
+        res.status(200).send('<h2>Exemplo de API Restful</h2> <span>Node.js, Express e MongoDB</span>'+
+        '<hr><table> <thead> <tr> <th>ROTA</th> <th>HTTP(Verbo)</th> <th>Request</th> <th>Return</th> <th>Description</th> </tr> </thead> <tbody> <tr> <td>/api/</td> <td>GET</td> <td>-</td> <td>HTML</td> <td>API index</td> </tr> <tr> <td>/api/user</td> <td>GET</td> <td>-</td> <td>JSON</td> <td>List users</td> </tr> <tr> <td>/api/user</td> <td>POST</td> <td>JSON</td> <td>JSON</td> <td>Create user</td> </tr> <tr> <td>/api/user/:id</td> <td>GET</td> <td>int(id)</td> <td>JSON</td> <td>Get user by id</td> </tr> <tr> <td>/api/user/:id</td> <td>PUT</td> <td>JSON, int(id)</td> <td>JSON</td> <td>Save user by id</td> </tr> <tr> <td>/api/user/:id</td> <td>DELETE</td> <td>int(id)</td> <td>boolean</td> <td>Delete user by id</td> </tr> </tbody> </table>'
+        );
     }
 
     // ------------------ Salvar o usuário ------------------
