@@ -1,4 +1,4 @@
-# Exemplo de API RESTFUL - SQL
+# Exemplo de API RESTFUL - NoSQL
 
 Exemplo de API RESTFUL com uso do Node.js, Express.js e MongoDB.
 
